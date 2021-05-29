@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
 
     // maxima velocidad de movimiento de la nave
     public float maxSpeed = 4.0f;
+    public float reloadDelay = 0.2f;
+    public bool canFire = true;
+
+    public Transform[] weaponTransforms;
 
     // se llama unica y exclusivamente cuando se crea la nave
     void Awake() {
@@ -68,14 +72,31 @@ public class PlayerController : MonoBehaviour
             theTransform.localRotation = Quaternion.LookRotation(positionToLook.normalized, Vector3.up);
         }
         */
+        //chequear disparo de la nave
+        if(Input.GetButtonDown(fireAxis) && canFire)
+        {
+            foreach(Transform t in weaponTransforms)
+            {
+                AmmoManager.SpawnAmmo(t.position, t.rotation);
+            }
+            canFire = false;
+            Invoke("EnableFire", reloadDelay);
+        }
     }
-
+    void EnableFire()
+    {
+        canFire = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
+    
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
