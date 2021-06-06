@@ -10,7 +10,7 @@ public class SpawnEnemies : MonoBehaviour
     private Transform origin = null;
 
     void Awake() {
-        origin = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        origin = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<Transform>();
     }
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,22 @@ public class SpawnEnemies : MonoBehaviour
 
     void Spawn()
     {
-        if (origin == null)
+        if (origin == null) {
+            Debug.Log("No hay origen");
             return;
-        
-        Vector3 spawnPosition = origin.position + Random.onUnitSphere * maxRadius;
-        spawnPosition = new Vector3(spawnPosition.x, 0.0f, spawnPosition.z);
-        Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+                }
+        else {
+
+            //Vector3 spawnPosition = origin.position + Random.onUnitSphere * maxRadius;
+            Vector3 spawnPosition = origin.position;
+            Vector3 aux = new Vector3(1,0,0);
+            aux = aux * Random.value * maxRadius;
+            spawnPosition = spawnPosition + aux;
+            //spawnPosition.x = spawnPosition.x * Random.value * maxRadius;
+            spawnPosition = new Vector3(spawnPosition.x, 0.0f, spawnPosition.z);
+
+            Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+        }
     }
 
 

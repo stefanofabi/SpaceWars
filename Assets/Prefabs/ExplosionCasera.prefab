@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2234316010727240852}
   m_Layer: 0
   m_Name: ExplosionCasera
-  m_TagString: Untagged
+  m_TagString: ExplosionCasera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

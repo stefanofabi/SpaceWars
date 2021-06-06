@@ -19,6 +19,7 @@ public class Ammo : MonoBehaviour
         if (health == null)
             return;
         health.healthPoints -= damage;
+        Invoke("Die", 0.0f);
     }
 
     void Die()

@@ -162,12 +162,12 @@ PrefabInstance:
     - target: {fileID: 8333586774166855360, guid: 92b0d15b294360a4f82f2355c56296b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8333586774166855360, guid: 92b0d15b294360a4f82f2355c56296b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.38
+      value: -1.62
       objectReference: {fileID: 0}
     - target: {fileID: 8333586774166855360, guid: 92b0d15b294360a4f82f2355c56296b5,
         type: 3}
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 1345108692}
   m_Layer: 0
   m_Name: EnemySpawner
-  m_TagString: Untagged
+  m_TagString: EnemySpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -637,8 +637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b2cf811d6772f4ba6da20d4f34fa1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRadius: 3
-  interval: 5
+  maxRadius: 20
+  interval: 2
   objectToSpawn: {fileID: 8333586774166855366, guid: 92b0d15b294360a4f82f2355c56296b5,
     type: 3}
 --- !u!4 &1345108693
@@ -649,7 +649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345108691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -674,8 +674,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385886169645238692, guid: a5b53d5f89900d448b86f06f062e6d52,
         type: 3}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385886169645238692, guid: a5b53d5f89900d448b86f06f062e6d52,
+        type: 3}
       propertyPath: reloadDelay
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5385886169645238692, guid: a5b53d5f89900d448b86f06f062e6d52,
         type: 3}

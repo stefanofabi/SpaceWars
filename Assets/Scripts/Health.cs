@@ -25,7 +25,11 @@ public class Health : MonoBehaviour
 
                 // si le configuramos algun efecto al morir este se reproducira en este momento
                 if (deathParticlesPrefab != null) {
-                    Instantiate(deathParticlesPrefab, theTransform.position, theTransform.rotation);
+                    Transform rotacionDePrefab = theTransform;
+                    //rotacionDePrefab = GameObject.FindGameObjectWithTag("ExplosionCasera").GetComponent<Transform>();
+                    rotacionDePrefab.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
+                    
+                    Instantiate(deathParticlesPrefab, theTransform.position, rotacionDePrefab.rotation);
 
                     // eliminamos el objeto de la pantalla
                     if (shouldBeDestroyedOnDeath) {
