@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,8 +38,8 @@ public class PlayerController : MonoBehaviour
         // son valores entre -1 y 1 
         // getAxis devuelve un numero entre -1 y 1
         // -1 indica izq - 1 indica derecha o abajo y arriba respectivamente en vertical
-        float horizontal = Input.GetAxis(horizontalAxis);   // movimiento horizontal que realizo la nave
-        float vertical = Input.GetAxis(verticalAxis);       // movimiento vertical que realizo la nave
+        float horizontal = CrossPlatformInputManager.GetAxis(horizontalAxis);   // movimiento horizontal que realizo la nave
+        float vertical = CrossPlatformInputManager.GetAxis(verticalAxis);       // movimiento vertical que realizo la nave
 
         // aca congelamos Y para simular un juego 2D y Z para que no se mueva hacia arriba o abajo
         Vector3 direccionDelMovimiento = new Vector3(horizontal, 0, 0);
