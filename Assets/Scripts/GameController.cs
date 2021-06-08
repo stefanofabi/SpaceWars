@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameController.gameOverText.gameObject.SetActive(false);
     }
     public static void GameOver()
     {

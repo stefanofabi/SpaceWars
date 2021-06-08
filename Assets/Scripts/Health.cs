@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public GameObject deathParticlesPrefab = null;
     private Transform theTransform = null;
     public bool shouldBeDestroyedOnDeath = true;
-
+    public bool shouldShowGameOverOnDeath = false;
     // propiedad en c#
     // programacion orientada a eventos
     public float healthPoints {
@@ -35,6 +35,13 @@ public class Health : MonoBehaviour
                     if (shouldBeDestroyedOnDeath) {
                         Destroy(gameObject);
                     }
+                }
+                if (shouldShowGameOverOnDeath == true)
+                {
+                    GameController.GameOver();
+                }
+                {
+
                 }
             }
         }
