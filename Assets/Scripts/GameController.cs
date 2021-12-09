@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public Text scoreText = null;
     public Text gameOverText = null;
     public static GameController gameController = null;
+    public GameObject ship = null;
     public void Awake()
     {
         gameController = this;
@@ -16,6 +17,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      //  gameController.ship.gameObject.SetActive(false);
         gameController.gameOverText.gameObject.SetActive(false);
     }
     public static void GameOver()
