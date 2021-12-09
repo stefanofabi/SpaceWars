@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SpaceWars.unity
+    guid: aa2b211c2d7f92343b9919dab06ab35f
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f25a06f0855d95f4fbf68e7d1c24a60b
   m_configObjects: {}

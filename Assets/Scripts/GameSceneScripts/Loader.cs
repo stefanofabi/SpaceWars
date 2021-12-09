@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public static class Loader
 {
 
-    public enum Scene{SpaceWars,}
+    public enum Scene{
+        SpaceWars,
+        MainMenu,
+    }
         
     public static void Load(Scene scene)
     {

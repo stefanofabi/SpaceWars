@@ -8,6 +8,9 @@ TagManager:
   - EnemySpawner
   - ExplosionCasera
   - MainMenuButton
+  - Fire
+  - PlayButton
+  - ExitButton
   layers:
   - Default
   - TransparentFX
