@@ -35,4 +35,9 @@ public class GameController : MonoBehaviour
             scoreText.text = scorePrefix + score.ToString();
         }
     }
+
+    public static void SetScoreToCero()
+    {
+        score = 0;
+    }
 }
