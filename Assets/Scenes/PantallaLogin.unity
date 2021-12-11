@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 503583358}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: PlayerNameText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 1651523130}
   - component: {fileID: 1651523129}
   m_Layer: 5
-  m_Name: BotonLogIn
+  m_Name: LoginButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 1706435730}
   - component: {fileID: 1706435729}
   m_Layer: 5
-  m_Name: ButtonRegistro
+  m_Name: RegisterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,7 +1014,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1706435730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 339027338}
+        m_TargetAssemblyTypeName: UserHandler, Assembly-CSharp
+        m_MethodName: ReadRegisterInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1706435730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,7 +1078,7 @@ GameObject:
   - component: {fileID: 1826979285}
   - component: {fileID: 1826979284}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: PasswordField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1371,7 +1383,7 @@ GameObject:
   - component: {fileID: 2063626005}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: PlayerPasswordText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1449,7 +1461,7 @@ GameObject:
   - component: {fileID: 2123435250}
   - component: {fileID: 2123435249}
   m_Layer: 5
-  m_Name: Titulo
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1529,7 +1541,7 @@ GameObject:
   - component: {fileID: 2127504337}
   - component: {fileID: 2127504336}
   m_Layer: 5
-  m_Name: Nombre
+  m_Name: NameField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,6 +11,8 @@ TagManager:
   - Fire
   - PlayButton
   - ExitButton
+  - PlayerNameText
+  - PlayerPasswordText
   layers:
   - Default
   - TransparentFX

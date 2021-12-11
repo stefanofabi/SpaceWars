@@ -10,6 +10,7 @@ public static class Loader
     public enum Scene{
         SpaceWars,
         MainMenu,
+        PantallaLogin,
     }
         
     public static void Load(Scene scene)

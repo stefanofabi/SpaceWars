@@ -5,5 +5,5 @@ using UnityEngine;
 public interface UserInterface
 {
 
-    void createUser(string email, string password);   
+    bool createUser(string email, string password);   
 }
