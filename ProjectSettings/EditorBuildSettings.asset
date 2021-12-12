@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SpaceWars.unity
-    guid: aa2b211c2d7f92343b9919dab06ab35f
+    path: Assets/Scenes/PantallaLogin.unity
+    guid: 9fa23a955386e8c43843ee28fb6bac22
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f25a06f0855d95f4fbf68e7d1c24a60b
+  - enabled: 1
+    path: Assets/Scenes/SpaceWars.unity
+    guid: aa2b211c2d7f92343b9919dab06ab35f
   m_configObjects: {}

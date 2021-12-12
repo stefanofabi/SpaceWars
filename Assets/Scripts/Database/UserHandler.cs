@@ -9,7 +9,7 @@ public class UserHandler : DBConnector, UserInterface
     public bool createUser(string name, string password) 
     {
         this._query = "INSERT INTO users (name, password) VALUES ('"+name+"', '"+password+"')";
-        _command = _conexion.CreateCommand();
+        _command = _connection.CreateCommand();
         _command.CommandText = _query;
         
         try 
@@ -25,8 +25,8 @@ public class UserHandler : DBConnector, UserInterface
     public void ReadRegisterInput() 
     {
         Debug.Log("Clicked Register Button");
-
-        dbConnect("URI=file:"+Application.dataPath+"/DB/spacewars.db");
+        
+        dbConnect("spacewars.db");
 
         string name = GameObject.FindGameObjectWithTag("PlayerNameText").GetComponent<UnityEngine.UI.Text>().text;
         string password = GameObject.FindGameObjectWithTag("PlayerPasswordText").GetComponent<UnityEngine.UI.Text>().text;
