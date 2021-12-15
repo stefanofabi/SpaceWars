@@ -9,6 +9,7 @@ public class UserHandler : DBConnector, UserInterface
     public bool createUser(string name, string password) 
     {
         this._query = "INSERT INTO users (name, password) VALUES ('"+name+"', '"+password+"')";
+        Debug.Log("Se inserto : " + name + password);
         _command = _connection.CreateCommand();
         _command.CommandText = _query;
         
