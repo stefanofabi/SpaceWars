@@ -20,6 +20,7 @@ public class CollisionDamage : MonoBehaviour
 
         // resto vida a la nave 
         health.healthPoints -= damagePoints * Time.deltaTime;
+
     }
 
     // Start is called before the first frame update
