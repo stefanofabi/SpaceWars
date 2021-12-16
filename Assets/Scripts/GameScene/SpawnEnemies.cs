@@ -8,14 +8,16 @@ public class SpawnEnemies : MonoBehaviour
     public float interval = 5.0f;
     public GameObject objectToSpawn = null;
     private Transform origin = null;
+    public Health health = null;
 
     void Awake() {
         origin = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<Transform>();
+        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 0.0f, interval);
+            InvokeRepeating("Spawn", 0.0f, interval);
     }
 
     void Spawn()
@@ -42,6 +44,10 @@ public class SpawnEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if ((int)health.healthPoints == 0)
+        {
+            Debug.Log("Cancelo el invoke del spawn enemies");
+            CancelInvoke();
+        }
     }
 }

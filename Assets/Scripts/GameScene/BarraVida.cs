@@ -10,5 +10,6 @@ public class BarraVida : MonoBehaviour
     {
         //Debug.Log("Se actualizo el valor de la vida en: "+ health);
         slider.value = (int) health;
+
     }
 }
