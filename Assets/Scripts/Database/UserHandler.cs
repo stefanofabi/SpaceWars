@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UserHandler : DBConnector, UserInterface
 {   
-    public bool createUser(string name, string password) 
+    public  bool createUser(string name, string password) 
     {
         this._query = "INSERT INTO users (name, password) VALUES ('"+name+"', '"+password+"')";
         Debug.Log("Se inserto : " + name + password);
@@ -47,7 +47,7 @@ public class UserHandler : DBConnector, UserInterface
     public bool loginUser(string name, string pass)
     {
         bool resultado = false;
-        this._query = "SELECT name, password FROM users WHERE name='" + name + "' AND password = '" + pass+"' LIMIT 1";
+        this._query = "SELECT id,name, password FROM users WHERE name='" + name + "' AND password = '" + pass+"' LIMIT 1";
         
         _command = _connection.CreateCommand();
         _command.CommandText = _query;
@@ -57,9 +57,9 @@ public class UserHandler : DBConnector, UserInterface
             _reader = _command.ExecuteReader();
             if (_reader.Read())
             {
-                //  string id = reader.GetString(0);
-                string userName = _reader.GetString(0);
-                string passw = _reader.GetString(1);
+                string userName = _reader.GetString(1);
+                string passw = _reader.GetString(2);
+                Estado.idUsuario = _reader.GetInt32(0);
                 resultado = true;
                 Debug.Log("SE LOGUEO USUARIO =" + userName + "CONTRASEÑA =" + passw);
             }
@@ -96,5 +96,30 @@ public class UserHandler : DBConnector, UserInterface
         }
 
         dbDisconnect();
+    }
+
+    public void ReadScoreInput(int id, int score)
+    {
+        dbConnect("spacewars.db");
+        cargarScore(id, score);
+        dbDisconnect();
+    }
+    
+    public bool cargarScore(int id, int score)
+    {
+        this._query = "INSERT INTO scores (date, user_id, score) VALUES (DATE('now'), '" + id + "' , " + score + ")";
+        Debug.Log("Se registro el puntaje : " + score);
+        _command = _connection.CreateCommand();
+        _command.CommandText = _query;
+
+        try
+        {
+            _reader = _command.ExecuteReader();
+        }
+        catch (SqliteException exception)
+        {
+            Debug.Log(exception.ToString());
+        }
+        return _reader.RecordsAffected > 0 ? true : false;
     }
 }
