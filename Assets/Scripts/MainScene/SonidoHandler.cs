@@ -5,6 +5,7 @@ using UnityEngine;
 public class SonidoHandler : MonoBehaviour
 {
     public Estado state = null;
+
     // Start is called before the first frame update
     void Start()
     {

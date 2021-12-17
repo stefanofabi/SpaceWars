@@ -21,14 +21,7 @@ public class Estado : MonoBehaviour
     }
     public void cambiarSonido()
     {
-        if (sonidoOn)
-        {
-            sonidoOn = false;
-        }
-        else
-        {
-            sonidoOn = true;
-        }
+        sonidoOn = !sonidoOn;
     }
 
 }

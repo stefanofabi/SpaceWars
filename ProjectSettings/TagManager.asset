@@ -18,6 +18,7 @@ TagManager:
   - EstadoDeJuego
   - MainCanvas
   - CanvasRanking
+  - SoundButton
   layers:
   - Default
   - TransparentFX

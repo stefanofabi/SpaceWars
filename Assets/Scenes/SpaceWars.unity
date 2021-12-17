@@ -484,7 +484,6 @@ MonoBehaviour:
   scorePrefix: 'Score: '
   scoreText: {fileID: 1449797463}
   gameOverText: {fileID: 2075895749}
-  ship: {fileID: 620011437}
 --- !u!4 &522196199
 Transform:
   m_ObjectHideFlags: 0
