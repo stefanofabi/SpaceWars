@@ -10,7 +10,6 @@ public class GameController : DBConnector
     public Text scoreText = null;
     public Text gameOverText = null;
     public static GameController gameController = null;
-    public GameObject ship = null;
 
     public void Awake()
     {
@@ -53,6 +52,5 @@ public class GameController : DBConnector
     {
         UserHandler handler = new UserHandler();
         handler.ReadScoreInput(Estado.idUsuario, score);
-
     }
 }

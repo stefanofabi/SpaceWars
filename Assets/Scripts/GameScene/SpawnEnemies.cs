@@ -25,8 +25,10 @@ public class SpawnEnemies : MonoBehaviour
         if (origin == null) {
             Debug.Log("No hay origen");
             return;
-                }
-        else {
+                
+        } 
+        else 
+        {
 
             //Vector3 spawnPosition = origin.position + Random.onUnitSphere * maxRadius;
             Vector3 spawnPosition = origin.position;
@@ -49,5 +51,18 @@ public class SpawnEnemies : MonoBehaviour
             Debug.Log("Cancelo el invoke del spawn enemies");
             CancelInvoke();
         }
+
+        AddMoreSpeed();
+    }
+
+    public void AddMoreSpeed() 
+    {
+        // A medida que pasa el tiempo del juego aumenta la velocidad de los enemigos
+        if (Time.time > 40) 
+            objectToSpawn.GetComponent<Movement>().maxSpeed = 5.0f;
+        else if (Time.time > 30)
+            objectToSpawn.GetComponent<Movement>().maxSpeed = 4.0f;
+        else if (Time.time > 15)
+            objectToSpawn.GetComponent<Movement>().maxSpeed = 3.0f;
     }
 }
