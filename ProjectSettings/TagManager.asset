@@ -20,6 +20,7 @@ TagManager:
   - CanvasRanking
   - SoundButton
   - CanvasManager
+  - primero
   layers:
   - Default
   - TransparentFX
