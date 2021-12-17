@@ -22,8 +22,13 @@ public class MainMenuSceneUI : MonoBehaviour
         Loader.Load(Loader.Scene.SpaceWars);
     }
 
-    void exitButton() 
+    void exitButton()
     {
         Application.Quit();
+    }
+    public void rankingButton()
+    {
+        GameObject.FindGameObjectWithTag("MainCanvas").SetActive(false);
+        GameObject.FindGameObjectWithTag("CanvasRanking").SetActive(true);
     }
 }

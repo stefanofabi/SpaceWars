@@ -15,6 +15,9 @@ TagManager:
   - PlayerPasswordText
   - BarraVida
   - Objetobarra
+  - EstadoDeJuego
+  - MainCanvas
+  - CanvasRanking
   layers:
   - Default
   - TransparentFX
