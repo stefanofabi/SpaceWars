@@ -48,7 +48,7 @@ public class SpawnEnemies : MonoBehaviour
     {
         if ((int)health.healthPoints == 0)
         {
-            Debug.Log("Cancelo el invoke del spawn enemies");
+            //Debug.Log("Cancelo el invoke del spawn enemies");
             CancelInvoke();
         }
 

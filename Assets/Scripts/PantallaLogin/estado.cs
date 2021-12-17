@@ -6,6 +6,7 @@ public class Estado : MonoBehaviour
 {
     public static Estado estado;
     public static int idUsuario;
+    public bool sonidoOn = true;
 
     private void Awake()
     {
@@ -18,18 +19,16 @@ public class Estado : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // Start is called before the first frame update
-    void Start()
+    public void cambiarSonido()
     {
-        
+        if (sonidoOn)
+        {
+            sonidoOn = false;
+        }
+        else
+        {
+            sonidoOn = true;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
 
 }
