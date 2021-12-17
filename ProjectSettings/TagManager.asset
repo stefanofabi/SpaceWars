@@ -19,6 +19,7 @@ TagManager:
   - MainCanvas
   - CanvasRanking
   - SoundButton
+  - CanvasManager
   layers:
   - Default
   - TransparentFX

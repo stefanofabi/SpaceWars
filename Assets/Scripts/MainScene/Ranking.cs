@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Ranking : MonoBehaviour
 {
+    public CanvasManager canvasManager = null;
+    private void Awake()
+    {
+        canvasManager = GameObject.FindGameObjectWithTag("CanvasManager").GetComponent<CanvasManager>();
+    }
     public void backButton()
     {
-        GameObject.FindGameObjectWithTag("Canvas_Ranking").SetActive(false);
-        GameObject.FindGameObjectWithTag("MainCanvas").SetActive(true);
+        canvasManager.desactivarRankingCanvas();
+        canvasManager.activarMainCanvas();
+        //GameObject.FindGameObjectWithTag("Canvas_Ranking").SetActive(false);
+        //GameObject.FindGameObjectWithTag("MainCanvas").SetActive(true);
     }
 }

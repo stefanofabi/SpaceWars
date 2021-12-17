@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuSceneUI : MonoBehaviour
 {
-
+    public CanvasManager canvasManager = null;
     public void Awake()
     {
         Button playMenuButton = GameObject.Find("PlayButton").GetComponent<Button>();
@@ -14,6 +14,8 @@ public class MainMenuSceneUI : MonoBehaviour
 
         Button exitMenuButton = GameObject.Find("ExitButton").GetComponent<Button>();
         exitMenuButton.onClick.AddListener(exitButton);
+
+        canvasManager = GameObject.FindGameObjectWithTag("CanvasManager").GetComponent<CanvasManager>();
     }
 
     void playButton()
@@ -28,7 +30,9 @@ public class MainMenuSceneUI : MonoBehaviour
     }
     public void rankingButton()
     {
-        GameObject.FindGameObjectWithTag("MainCanvas").SetActive(false);
-        GameObject.FindGameObjectWithTag("CanvasRanking").SetActive(true);
+        canvasManager.activarRankingCanvas();
+        canvasManager.desactivarMainCanvas();
+        //GameObject.FindGameObjectWithTag("CanvasRanking").SetActive(true);
+        //GameObject.FindGameObjectWithTag("MainCanvas").SetActive(false);
     }
 }

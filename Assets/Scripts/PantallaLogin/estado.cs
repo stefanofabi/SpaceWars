@@ -6,7 +6,7 @@ public class Estado : MonoBehaviour
 {
     public static Estado estado;
     public static int idUsuario;
-    public bool sonidoOn = true;
+    public static bool sonidoOn = true;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class Estado : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void cambiarSonido()
+    public static void cambiarSonido()
     {
         sonidoOn = !sonidoOn;
     }
