@@ -15,6 +15,7 @@ public class GameController : DBConnector
     {
         gameController = this;
     }
+
     // Start is called before the first frame update
     void Start()
     {

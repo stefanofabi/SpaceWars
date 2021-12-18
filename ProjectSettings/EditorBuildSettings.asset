@@ -14,4 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceWars.unity
     guid: aa2b211c2d7f92343b9919dab06ab35f
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: e0af0e36aaef00a4281a2abd17553a8b,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 43e08f0b9216e074088d29537fcd1047,
+      type: 2}

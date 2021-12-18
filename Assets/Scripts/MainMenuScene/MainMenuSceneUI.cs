@@ -26,13 +26,12 @@ public class MainMenuSceneUI : MonoBehaviour
 
     void exitButton()
     {
-        Application.Quit();
+        Loader.Load(Loader.Scene.LoginScreen);
     }
+    
     public void rankingButton()
     {
         canvasManager.activarRankingCanvas();
         canvasManager.desactivarMainCanvas();
-        //GameObject.FindGameObjectWithTag("CanvasRanking").SetActive(true);
-        //GameObject.FindGameObjectWithTag("MainCanvas").SetActive(false);
     }
 }
