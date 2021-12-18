@@ -57,12 +57,12 @@ public class SpawnEnemies : MonoBehaviour
 
     public void AddMoreSpeed() 
     {
-        // A medida que pasa el tiempo del juego aumenta la velocidad de los enemigos
-        if (Time.time > 40) 
-            objectToSpawn.GetComponent<Movement>().maxSpeed = 5.0f;
-        else if (Time.time > 30)
+        // A medida que el jugador aumenta el score a su vez aumenta la velocidad de los enemigos
+        if (GameController.score > 3000) 
             objectToSpawn.GetComponent<Movement>().maxSpeed = 4.0f;
-        else if (Time.time > 15)
+        else if (Time.time > 2000)
             objectToSpawn.GetComponent<Movement>().maxSpeed = 3.0f;
+        else if (Time.time > 1000)
+            objectToSpawn.GetComponent<Movement>().maxSpeed = 2.0f;
     }
 }
