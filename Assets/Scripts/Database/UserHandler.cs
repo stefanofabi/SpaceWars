@@ -34,7 +34,7 @@ public class UserHandler : DBConnector, UserInterface
 
         if (createUser(name, password)) 
         {
-            Loader.Load(Loader.Scene.MainMenu);
+            ReadLogInInput();
             Debug.Log("Se creo el usuario "+name+" existosamente");
         } else 
         {
@@ -61,11 +61,11 @@ public class UserHandler : DBConnector, UserInterface
                 string passw = _reader.GetString(2);
                 Estado.idUsuario = _reader.GetInt32(0);
                 resultado = true;
-                Debug.Log("SE LOGUEO USUARIO =" + userName + "CONTRASEÑA =" + passw);
+                Debug.Log("SE LOGUEO USUARIO =" + userName + "CONTRASEï¿½A =" + passw);
             }
             else
             {
-                Debug.Log("Contraseña Incorrecta");
+                Debug.Log("Contraseï¿½a Incorrecta");
             }
         }
         catch (SqliteException exception)
