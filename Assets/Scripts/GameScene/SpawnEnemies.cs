@@ -52,17 +52,26 @@ public class SpawnEnemies : MonoBehaviour
             CancelInvoke();
         }
 
-        AddMoreSpeed();
+        AddMoreDifficulty();
     }
 
-    public void AddMoreSpeed() 
+    public void AddMoreDifficulty() 
     {
         // A medida que el jugador aumenta el score a su vez aumenta la velocidad de los enemigos
         if (GameController.score > 3000) 
+        {
             objectToSpawn.GetComponent<Movement>().maxSpeed = 4.0f;
+            interval = 2.0f;
+        }
         else if (GameController.score > 2000)
+        {
             objectToSpawn.GetComponent<Movement>().maxSpeed = 3.0f;
+            interval = 3.0f;
+        }
         else if (GameController.score > 1000)
+        {
             objectToSpawn.GetComponent<Movement>().maxSpeed = 2.0f;
+            interval = 4.0f;
+        }
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuSceneUI : MonoBehaviour
 {
     public CanvasManager canvasManager = null;
+    
     public void Awake()
     {
         Button playMenuButton = GameObject.Find("PlayButton").GetComponent<Button>();
