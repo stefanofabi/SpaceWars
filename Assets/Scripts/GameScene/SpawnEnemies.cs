@@ -61,16 +61,19 @@ public class SpawnEnemies : MonoBehaviour
         if (GameController.score > 3000) 
         {
             objectToSpawn.GetComponent<Movement>().maxSpeed = 4.0f;
+            objectToSpawn.GetComponent<Health>().healthPoints = 200.0f;
             interval = 2.0f;
         }
         else if (GameController.score > 2000)
         {
             objectToSpawn.GetComponent<Movement>().maxSpeed = 3.0f;
+            objectToSpawn.GetComponent<Health>().healthPoints = 150.0f;
             interval = 3.0f;
         }
         else if (GameController.score > 1000)
         {
             objectToSpawn.GetComponent<Movement>().maxSpeed = 2.0f;
+            objectToSpawn.GetComponent<Health>().healthPoints = 120.0f;
             interval = 4.0f;
         }
     }
