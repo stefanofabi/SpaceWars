@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    public float damage = 100.0f;
+    public static float damage = 100.0f;
     public float lifetime = 2.0f;
 
     void OnEnable()

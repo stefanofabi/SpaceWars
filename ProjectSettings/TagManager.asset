@@ -21,6 +21,7 @@ TagManager:
   - SoundButton
   - CanvasManager
   - primero
+  - AmmoManager
   layers:
   - Default
   - TransparentFX

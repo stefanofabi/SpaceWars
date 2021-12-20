@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         );
 
         // rotacion de la nave 
-        /*
+        
         if (mouseLook) {
             // coordenadas de la pantalla, z=0 por ser un juego en 2D? 
             Vector3 mousePositionInScreen =  new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
@@ -72,26 +72,12 @@ public class PlayerController : MonoBehaviour
             Vector3 positionToLook = mousePositionInWorld - theTransform.position;
             theTransform.localRotation = Quaternion.LookRotation(positionToLook.normalized, Vector3.up);
         }
-        */
-        //chequear disparo de la nave
-        if(Input.GetButtonDown(fireAxis) && canFire)
-        {
-            foreach(Transform t in weaponTransforms)
-            {
-                AmmoManager.SpawnAmmo(t.position, t.rotation);
-            }
-            canFire = false;
-            Invoke("EnableFire", reloadDelay);
-        }
     }
+
     void EnableFire()
     {
+        Debug.Log("Disparar habilitado");
         canFire = true;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
     
     public void Die()
@@ -101,6 +87,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //chequear disparo de la nave
+        if(Input.GetButtonDown(fireAxis) && canFire)
+        {
+            Debug.Log("Disparar deshabilitado");
+
+            foreach(Transform t in weaponTransforms)
+            {
+                AmmoManager.SpawnAmmo(t.position, t.rotation);
+            }
+            canFire = false;
+            Invoke("EnableFire", reloadDelay);
+        }
     }
 }
