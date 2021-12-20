@@ -19,8 +19,8 @@ public class CollisionDamage : MonoBehaviour
         }
 
         // resto vida a la nave 
-        //health.healthPoints -= damagePoints * Time.deltaTime;
-        health.healthPoints -= damagePoints;
+        health.healthPoints -= damagePoints * Time.deltaTime;
+        //health.healthPoints -= damagePoints;
 
         // Elimino el objeto que colisionó
         //Destroy(gameObject);
