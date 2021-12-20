@@ -20,6 +20,9 @@ public class UserHandler : DBConnector, UserInterface
             Debug.Log(exception.ToString());
         }
 
+        if (_reader == null)
+            return false;
+            
         return _reader.RecordsAffected > 0 ? true : false;
     }
 
