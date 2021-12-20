@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         );
 
         // rotacion de la nave 
-        
+        /*
         if (mouseLook) {
             // coordenadas de la pantalla, z=0 por ser un juego en 2D? 
             Vector3 mousePositionInScreen =  new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
             Vector3 positionToLook = mousePositionInWorld - theTransform.position;
             theTransform.localRotation = Quaternion.LookRotation(positionToLook.normalized, Vector3.up);
         }
+        */
     }
 
     void EnableFire()

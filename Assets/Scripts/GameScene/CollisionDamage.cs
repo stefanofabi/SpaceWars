@@ -23,7 +23,7 @@ public class CollisionDamage : MonoBehaviour
         health.healthPoints -= damagePoints;
 
         // Elimino el objeto que colisionó
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
     }
 
